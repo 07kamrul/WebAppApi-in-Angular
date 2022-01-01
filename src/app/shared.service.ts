@@ -17,15 +17,15 @@ export class SharedService {
   }
 
   addDepartment(val:any){
-    return this.http.post<any>(this.APIUrl+'/Department', val);
+    return this.http.post(this.APIUrl+'/Department', val);
   }
 
   updateDepartment(val:any){
-    return this.http.put<any>(this.APIUrl+'/Department', val);
+    return this.http.put(this.APIUrl+'/Department', val);
   }
 
   deleteDepartment(val:any){
-    return this.http.get<any>(this.APIUrl+'/Department', val);
+    return this.http.delete(this.APIUrl+'/Department/', val);
   }
 
 
@@ -34,24 +34,24 @@ export class SharedService {
   }
 
   addEmployee(val:any){
-    return this.http.post<any>(this.APIUrl+'/Employee', val);
+    return this.http.post(this.APIUrl+'/Employee', val);
   }
 
   updateEmployee(val:any){
-    return this.http.put<any>(this.APIUrl+'/Employee', val);
+    return this.http.put(this.APIUrl+'/Employee', val);
   }
 
   deleteEmployee(val:any){
-    return this.http.get<any>(this.APIUrl+'/Employee', val);
+    return this.http.delete(this.APIUrl+'/Employee/', val);
   }
 
 
   uploadPhoto(val:any){
-    return this.http.post<any>(this.APIUrl+'/Employee/SaveFile', val);
+    return this.http.post(this.APIUrl+'/Employee/SaveFile', val);
   }
 
   getAllDepartmentNames():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/Employee/GetAllDepartmentNames');
+    return this.http.get<any[]>(this.APIUrl+'/Employee/GetAllDepartmentNames');
   }
 
 }
