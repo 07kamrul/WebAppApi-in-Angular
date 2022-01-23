@@ -8,7 +8,7 @@ import { ShowDepComponent } from '../show-dep/show-dep.component';
 })
 export class AddEditDepComponent implements OnInit {
 
-  constructor(private service:SharedService, private showDepComponent:ShowDepComponent) { }
+  constructor(private service:SharedService) { }
 
   @Input() dep:any;
   DepartmentId!:string;
